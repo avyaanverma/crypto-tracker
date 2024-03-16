@@ -1,0 +1,192 @@
+.active{
+    background-color: rgb(68, 59, 245);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(8, 17, 121);
+    position: sticky ;
+    top: 0;
+}
+
+nav .title{
+    font-size: 2rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    font-size: 1.25rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+nav ul li a:not(.active,.login):hover{
+    background-color: rgb(101, 191, 247);
+}
+nav ul li a:not(.active):hover{
+    opacity: 1;
+}
+
+nav .menu{
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+nav .menu span{
+    height: 0.5rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.2rem;
+}
+
+
+@media (max-width : 630px){
+    nav .menu{
+        display: flex;
+    }
+    nav{
+        flex-direction: column;
+        align-items: start;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    nav ul.open{
+        display: flex;
+    }
+    nav ul li{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a{
+        margin: 0.2rem 0.5rem;
+    }
+}
+
+.login{
+    background-color: rgb(255, 0, 0);
+    opacity:  0.8;
+}
+.login:hover{
+    opacity: 1;
+}
+
+
+
+.footer-main{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    font-size: large;
+    /* margin-top: 20px; */
+    padding: 20px;
+    width: 100% ;
+    /* bottom: 0; */
+}
+
+
+.c-main{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    font-size: 1.25rem ;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.c{
+    width: 80%;
+}
+.one{
+    
+    background-image: url(https://images.unsplash.com/photo-1710237103624-77e1c5b612a8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.one p{
+    max-width: 500px;
+}
+.one .register{
+    text-decoration: none;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.sub-heading{
+    margin-top: 3rem;
+}
+
+.container{
+    display: flex;
+    margin-top: 40px;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 8px  rgba(153, 153, 153, 0.8);
+    width: 340px; 
+    padding: 20px;
+    margin-right: 50px;
+    border-radius: 8px;
+}
+
+.card img{
+    width: 300px;
+}
+.card-text,.card-title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.three{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.three p{
+    max-width: 500px;
+}
+.three .register{
+    text-decoration: none;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
