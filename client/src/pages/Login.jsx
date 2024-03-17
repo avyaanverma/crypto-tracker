@@ -31,6 +31,31 @@ export default function Login(){
   }
  
   return (
+    <div className="main">
+      <div class="container-l" id="container-l">
+          <div class="form-container sign-in">
+              <form onSubmit={loginUser}>
+                  <h1>Sign In</h1>
+                  <input type="email" placeholder="Email" value={data.email} onChange={(e) => setData({...data,email: e.target.value})}/>
+                  <input type="password" placeholder="Password" value={data.password} onChange={(e) => setData({...data,password: e.target.value})}/>
+                  {/* <a href="#">Forget Your Password?</a> */}
+                  <button type="submit">Sign In</button>
+              </form>
+          </div>
+          <div class="toggle-container">
+              <div class="toggle">
+                  <div class="toggle-panel toggle-right">
+                      <h1>Welcome Back!</h1>
+                      <p>Enter your details</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+  )
+
+  {/* return (
     <div className="con-m">
       <form onSubmit={loginUser}>
         <div className="con">
@@ -47,5 +72,5 @@ export default function Login(){
         
       </form>
     </div>
-  )
+  ) */}
 }

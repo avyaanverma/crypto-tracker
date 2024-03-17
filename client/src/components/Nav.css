@@ -11,7 +11,11 @@ nav{
     top: 0;
 }
 
-nav .title{
+.logo{
+    display: flex;
+    margin-left: 20px;
+}
+nav .logo .title{
     font-size: 2rem;
     margin: 1rem;
     font-weight: bold;

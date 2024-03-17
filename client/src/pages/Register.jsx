@@ -31,29 +31,63 @@ export default function Register(){
       }
 
   } 
-  
+
   return (
-    <div className="con-m">
-      
-        <form onSubmit={registerUser}>
-          <div className="con">
-            <label>Name</label>
-            <input type="text" placeholder='Enter name...' value={data.name} onChange={(e) => setData({...data,name: e.target.value})}/>
-          </div>
-          <div className="con">
-            <label>Email</label>
-            <input type="email" placeholder='Enter email...'  value={data.email} onChange={(e) => setData({...data,email: e.target.value})}/>
-          </div>
-          <div className="con">
-            <label>Password</label>
-            <input type="password" placeholder='Enter password...'  value={data.password} onChange={(e) => setData({...data,password: e.target.value})}/>
-          </div>
-          <div className="btn">
-            <button type='submit'>Submit</button>
-          </div>
-          
-        </form>
-      
+    <div className="main">
+      <div class="container-l active" id="container-l">
+        <div class="form-container sign-up">
+            <form onSubmit={registerUser}>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    {/* <!-- Remove icons -->
+                    <!-- <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a> -->
+                    <!-- <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a> --> */}
+                </div>
+                {/* <span>or use your email for registeration</span> */}
+                <input type="text" placeholder="Name" value={data.name} onChange={(e) => setData({...data,name: e.target.value})}/>
+                <input type="email" placeholder="Email" value={data.email} onChange={(e) => setData({...data,email: e.target.value})}/>
+                <input type="password" placeholder="Password"value={data.password} onChange={(e) => setData({...data,password: e.target.value})}/>
+                <button type='submit'>Sign Up</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your details</p>
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
+    
+  
   )
+  
+  // return (
+  //   <div className="con-m">
+      
+  //       <form onSubmit={registerUser}>
+  //         <div className="con">
+  //           <label>Name</label>
+  //           <input type="text" placeholder='Enter name...' value={data.name} onChange={(e) => setData({...data,name: e.target.value})}/>
+  //         </div>
+  //         <div className="con">
+  //           <label>Email</label>
+  //           <input type="email" placeholder='Enter email...'  value={data.email} onChange={(e) => setData({...data,email: e.target.value})}/>
+  //         </div>
+  //         <div className="con">
+  //           <label>Password</label>
+  //           <input type="password" placeholder='Enter password...'  value={data.password} onChange={(e) => setData({...data,password: e.target.value})}/>
+  //         </div>
+  //         <div className="btn">
+  //           <button type='submit'>Submit</button>
+  //         </div>
+          
+  //       </form>
+      
+  //   </div>
+  // )
 }

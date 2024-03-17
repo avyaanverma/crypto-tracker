@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import React,{ useState } from 'react';
 import "./Nav.css";
+import logo from  "../assets/logo.png";
 
 export default function Navbar() {
   const [menuOpen,setMenuOpen]=useState(false);
   return (
     <nav>
-      <Link to="/" className='title' >BitProphecy</Link>
+      <div className="logo">
+        <Link to="/"><img src={logo} width={60}></img></Link>
+        <Link to="/" className='title' >BitProphecy</Link>
+      </div>
+      
       <div className='menu' onClick={()=>{
         setMenuOpen(!menuOpen);
       }}>
