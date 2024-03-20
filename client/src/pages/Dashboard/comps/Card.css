@@ -1,0 +1,10 @@
+.card{
+    border: 2px solid #3b3b3b;
+}
+.card img{
+    width: 45px;
+    border: 3px solid #3b3b3b;
+    border-radius: 100%;
+    transform: rotate(-15deg);
+    /* height: ; */
+}

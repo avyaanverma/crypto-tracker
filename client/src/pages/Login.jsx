@@ -32,8 +32,8 @@ export default function Login(){
  
   return (
     <div className="main">
-      <div class="container-l" id="container-l">
-          <div class="form-container sign-in">
+      <div className="container-l" id="container-l">
+          <div className="form-container sign-in">
               <form onSubmit={loginUser}>
                   <h1>Sign In</h1>
                   <input type="email" placeholder="Email" value={data.email} onChange={(e) => setData({...data,email: e.target.value})}/>
@@ -42,9 +42,9 @@ export default function Login(){
                   <button type="submit">Sign In</button>
               </form>
           </div>
-          <div class="toggle-container">
-              <div class="toggle">
-                  <div class="toggle-panel toggle-right">
+          <div className="toggle-container">
+              <div className="toggle">
+                  <div className="toggle-panel toggle-right">
                       <h1>Welcome Back!</h1>
                       <p>Enter your details</p>
                   </div>
