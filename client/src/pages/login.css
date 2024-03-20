@@ -12,6 +12,7 @@
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    z-index: -1;
 }
 .container-l{
     background-color: #fff;
@@ -22,6 +23,7 @@
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    
 }
 
 .container-l p{
@@ -87,12 +89,14 @@
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+    
 }
 
 .sign-in{
     left: 0;
     width: 50%;
-    z-index: 2;
+    /* z-index: 2; */
+    /* z-index: -1; */
 }
 
 .container-l.active .sign-in{
@@ -103,14 +107,16 @@
     left: 0;
     width: 50%;
     opacity: 0;
-    z-index: 1;
+    /* z-index: 1; */
+    z-index: -1;
 }
 
 .container-l.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
-    z-index: 5;
+    /* z-index: 5; */
     animation: move 0.6s;
+    z-index: 0;
 }
 
 @keyframes move{
@@ -148,7 +154,8 @@
     overflow: hidden;
     transition: all 0.6s ease-in-out;
     border-radius: 150px 0 0 100px;
-    z-index: 1000;
+    /* z-index: 1000; */
+
 }
 
 .container-l.active .toggle-container{
@@ -167,6 +174,7 @@
     width: 200%;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
+    
 }
 
 .container-l.active .toggle{
@@ -186,6 +194,7 @@
     top: 0;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
+    
 }
 
 .toggle-left{
@@ -205,53 +214,3 @@
     transform: translateX(200%);
 }
 
-/* 
-
-.con-m{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    background-color: rgb(192, 255, 255);
-    height: 82%;
-}
-
-.con{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    
-}
-.con input{
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-}
-.con label{
-    margin-right: 80px;
-}
-
-form{
-    height: fit-content;
-    background-color: aqua;
-    padding: 40px;
-    border-radius: 10px;
-}
-.btn{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-.btn>button{
-    font-size: 20px;
-    border: none;
-    padding: 10px;
-    border-radius: 7px;
-    background-color: blue;
-    color: white;
-    opacity: 0.8;
-}
-.btn>button:hover{
-    cursor: pointer;
-    opacity: 1;
-} */

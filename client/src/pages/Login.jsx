@@ -55,22 +55,5 @@ export default function Login(){
     
   )
 
-  {/* return (
-    <div className="con-m">
-      <form onSubmit={loginUser}>
-        <div className="con">
-          <label>Email</label>
-          <input type="email" placeholder='Enter email...'  value={data.email} onChange={(e) => setData({...data,email: e.target.value})}/>
-        </div>
-        <div className="con">
-           <label>Password</label>
-          <input type="password" placeholder='Enter password...' value={data.password} onChange={(e) => setData({...data,password: e.target.value})}/>
-        </div>
-        <div className="btn">
-          <button type="submit">Login</button>
-        </div>
-        
-      </form>
-    </div>
-  ) */}
+  
 }

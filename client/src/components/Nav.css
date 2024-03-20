@@ -9,6 +9,7 @@ nav{
     background-color: rgb(8, 17, 121);
     position: sticky ;
     top: 0;
+    z-index: 1;
 }
 
 .logo{
