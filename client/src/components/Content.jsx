@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 
 import ReactImg from '../assets/pic.avif';
-
+import Bitcoin from '../assets/bitcoin.avif';
+import ETH from '../assets/eth.avif';
+import Solana from '../assets/solana.avif';
 import { Card, CardGroup } from 'react-bootstrap';
 
 
@@ -11,33 +13,29 @@ function Cards() {
   return (
             <CardGroup className="container">
             <Card className="card" >
-                <Card.Img variant="top" src={ReactImg} />
+                <Card.Img variant="top" src={Bitcoin} />
                 <Card.Body>
-                <Card.Title className="card-title">Card title</Card.Title>
+                <Card.Title className="card-title">Bitcoin (BTC)</Card.Title>
                 <Card.Text className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in
-                    to additional content. This content is a little bit longer.
+                The original cryptocurrency and the king of digital assets.
                 </Card.Text>
                 </Card.Body>
             </Card>
             <Card className="card" >
-                <Card.Img variant="top" src={ReactImg} />
+                <Card.Img variant="top" src={ETH} />
                 <Card.Body>
-                <Card.Title className="card-title">Card title</Card.Title>
+                <Card.Title className="card-title">Ethereum (ETH)</Card.Title>
                 <Card.Text className="card-text">
-                    This card has supporting text below as a natural lead-in to
-                    additional content.
+                The leading blockchain platform for decentralized applications (DApps) and smart contracts.
                 </Card.Text>
                 </Card.Body>
             </Card>
             <Card className="card" >
-                <Card.Img variant="top" src={ReactImg} />
+                <Card.Img variant="top" src={Solana} />
                 <Card.Body>
-                <Card.Title className="card-title">Card title</Card.Title>
+                <Card.Title className="card-title">Solana (SOL)</Card.Title>
                 <Card.Text className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in
-                    to additional content. This card has even longer content than the
-                    first to show that equal height action.
+                A high-performance blockchain platform designed for decentralized applications and crypto innovation.
                 </Card.Text>
                 </Card.Body>
             </Card>
@@ -51,8 +49,8 @@ export default function Content() {
     return (
         <div className='c-main'>
             <div className='one c'>
-                <h2>Lorem ipsum is placeholder text commonly used in the graphic</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <h2>Welcome to BitProphecy - Your Gateway to the World of Cryptocurrency!</h2>
+                <p>Discover, Analyze, and Stay Ahead in the Dynamic Crypto Market.</p>
                 <Link to='/register' className="register">Register</Link>
             </div>
 
@@ -62,7 +60,7 @@ export default function Content() {
 
             <div className='three c'>
                 <h2>Lorem ipsum is placeholder text commonly used in the graphic</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <p>Discover, Analyze, and Stay Ahead in the Dynamic Crypto Market.</p>
                 <Link to='/login' className="login register">Login</Link>
             </div>
         </div>

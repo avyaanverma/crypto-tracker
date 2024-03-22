@@ -28,7 +28,7 @@ export default function HomeStore() {
   })
 
   return (
-    <div className="container">
+    <div className="home-container">
       <div className="combined-container">
         <div className="coin-info">
           <p><span className="label">Cryptos:</span> <span className="value">2.4M+</span></p>
