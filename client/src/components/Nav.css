@@ -1,12 +1,12 @@
 .active{
-    background-color: rgb(68, 59, 245);
+    background-color: rgb(145, 31, 180);
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(8, 17, 121);
+    background-color: #000;
     position: sticky ;
     top: 0;
     z-index: 1;
@@ -21,7 +21,7 @@ nav .logo .title{
     margin: 1rem;
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: rgb(162, 33, 248);
 }
 
 nav ul{
@@ -37,14 +37,14 @@ nav ul li a{
     font-size: 1.25rem;
     display: block;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
 }
 
 nav ul li a:not(.active,.login):hover{
-    background-color: rgb(101, 191, 247);
+    background-color: rgb(213, 101, 247);
 }
 nav ul li a:not(.active):hover{
     opacity: 1;
@@ -96,7 +96,7 @@ nav .menu span{
 }
 
 .login{
-    background-color: rgb(255, 0, 0);
+    background-color: #FF3EA5;
     opacity:  0.8;
 }
 .login:hover{

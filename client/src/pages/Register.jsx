@@ -11,6 +11,7 @@ export default function Register(){
     email: '',
     password: '',
   })
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Add isLoggedIn state
 
   const registerUser = async (e) =>{
       e.preventDefault();
@@ -24,6 +25,7 @@ export default function Register(){
         }else{
           setData({})
           toast.success('Login Successful. Welcome!')
+          setIsLoggedIn(true); // Set isLoggedIn to true
           navigate('/login');
         }
       }catch(error){
@@ -34,6 +36,7 @@ export default function Register(){
 
   return (
     <div className="main">
+      {isLoggedIn && <Navbar />} {/* Render the Navbar only if isLoggedIn is true */}
       <div class="container-l active" id="container-l">
         <div class="form-container sign-up">
             <form onSubmit={registerUser}>
@@ -62,9 +65,5 @@ export default function Register(){
         </div>
       </div>
     </div>
-    
-  
   )
-  
-  
 }

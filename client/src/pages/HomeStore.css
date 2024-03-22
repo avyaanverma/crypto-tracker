@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    height: 80vh; /* Set the container height to the full viewport height */
+    padding: 20px; /* Move padding to the container instead of .combined-container */
+  }
+
+  .coin-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center coins vertically */
+    width: 100%; /* Occupy full width */
+    padding: 10px; /* Add padding for spacing */
+    height: 500px;
+    border: 2px solid black;
+    overflow-y: hidden;
+  }
+  
+  .combined-container {
+    display: flex;
+    flex-direction: column; /* Stack coin-info and search-container vertically */
+    align-items: center; /* Center the content horizontally */
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 20px; /* Add margin at the top */
+    width: 80%; /* Adjust width to match .container */
+  }
+  
+  .coin-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .coin-info p {
+    margin: 0;
+    margin-right: 20px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    width: 250px;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 40px 8px 10px; /* Adjust padding to make space for the search icon */
+    border-radius: 20px; /* Add border-radius for rounded corners */
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px; /* Position the search icon on the right */
+    top: 50%; /* Vertically center the icon */
+    transform: translateY(-50%);
+    color: #555;
+    cursor: pointer;
+  }
+  
+.message{
+  color: #555;
+  font-size: 2em;
+}

@@ -28,10 +28,10 @@ app.use(express.urlencoded({ extended: false }));
 // Routes
 
 
-app.get('/api/supported-currencies', async (req, res) => {
+app.get('/api/coins', async (req, res) => {
   const options = {
     method: 'GET',
-    url: 'https://coingecko.p.rapidapi.com/simple/supported_vs_currencies',
+    url: 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=INR&order=market_cap_desc&per_page=100&page=1&sparkline=false',
     headers: {
       'X-RapidAPI-Key': '0b79241ea8msh7c2ff7ce091ab2ep11f93djsn27a8810f7c5a',
       'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
@@ -40,7 +40,7 @@ app.get('/api/supported-currencies', async (req, res) => {
 
   try {
     const response = await axios.request(options);
-    console.log(response.data); 
+    // console.log(response.data); 
     res.json(response.data);
   } catch (error) {
     console.error(error);

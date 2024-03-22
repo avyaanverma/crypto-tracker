@@ -19,10 +19,7 @@ export default function Dashboard() {
           <div id='Graphs'>
             <Card coin="Bitcoin"/>
             <Card coin="Solaris"/>
-            <Card coin="Ethereum"/>
-            
-
-            
+            <Card coin="Ethereum"/>    
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from '../src/components/Navbar';
 import Home from '../src/pages/Home';
 import Register from '../src/pages/Register';
@@ -14,25 +14,29 @@ import HomeStore from './pages/HomeStore';
 axios.defaults.baseURL = 'http://localhost:8000';
 axios.defaults.withCredentials = true;
 
-
 function App() {
-   return (
+  const location = useLocation();
+
+  // what is location.pathname?
+  // location.pathname is the current URL of the page.
+  const hideNavbar = ['/login', '/register'].includes(location.pathname);
+
+  return (
     <div className='App'>
-    <UserContextProvider>
-     <Navbar />
-     <Toaster position='bottom-right' toastOptions={{duration: 2000}}/>
-     <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/register' element={<Register/>} />
-      <Route path='/login' element={<Login/>} />
-      <Route path='/dashboard' element={<Dashboard/>} />
-      <Route path='/homestore' element={<HomeStore/>}/>
-     </Routes>
-     <Footer />
-     </UserContextProvider>
-    
+      <UserContextProvider>
+        {!hideNavbar && <Navbar />}
+        <Toaster position='bottom-right' toastOptions={{duration: 2000}}/>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/register' element={<Register/>} />
+          <Route path='/login' element={<Login/>} />
+          <Route path='/dashboard' element={<Dashboard/>} />
+          <Route path='/homestore' element={<HomeStore/>}/>
+        </Routes>
+        <Footer />
+      </UserContextProvider>
     </div>
   )
 }
 
-export default App
+export default App;
