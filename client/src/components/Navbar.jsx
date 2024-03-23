@@ -8,8 +8,8 @@ export default function Navbar() {
   return (
     <nav>
       <div className="logo">
-        <Link to="/"><img src={logo} width={60}></img></Link>
-        <Link to="/" className='title' >BitProphecy</Link>
+        <Link to="/"><img className="logo-img" src={logo} width={50}></img></Link>
+        <Link to="/" className='title' >BITPROPHECY</Link>
       </div>
       
       <div className='menu' onClick={()=>{
