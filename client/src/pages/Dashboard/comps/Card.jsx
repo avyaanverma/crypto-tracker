@@ -14,7 +14,7 @@ const Card = ({coin}) => {
         labels: Data.map((data) => data.year), 
         datasets: [
           {
-            label: "Users Gained ",
+            label: "Users Gained",
             data: Data.map((data) => data.userGain),
             backgroundColor: [
                 "rgba(75,192,192,1)",

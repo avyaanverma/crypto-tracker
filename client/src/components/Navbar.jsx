@@ -31,6 +31,7 @@ export default function Navbar() {
           <Link to='/login' className="login">Login</Link>
         </li>
         <li>
+          {/* {req.cookie.token == "" ? null : } */}
           <Link to='/dashboard' className="dashboard">Dashboard</Link>
         </li>
       </ul>
