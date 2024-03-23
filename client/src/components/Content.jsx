@@ -49,8 +49,8 @@ export default function Content() {
     return (
         <div className='c-main'>
             <div className='one c'>
-                <h2>Welcome to BitProphecy - Your Gateway to the World of Cryptocurrency!</h2>
-                <p>Discover, Analyze, and Stay Ahead in the Dynamic Crypto Market.</p>
+                <h2>Welcome to BitProphecy - Your Gateway to the World of Cryptocurrency</h2>
+                <p><b>Discover, Analyze, and Stay Ahead!</b></p>
                 <Link to='/register' className="register">Register</Link>
             </div>
 
@@ -58,11 +58,11 @@ export default function Content() {
 
             <Cards />
 
-            <div className='three c'>
+            {/* <div className='three c'>
                 <h2>Lorem ipsum is placeholder text commonly used in the graphic</h2>
                 <p>Discover, Analyze, and Stay Ahead in the Dynamic Crypto Market.</p>
                 <Link to='/login' className="login register">Login</Link>
-            </div>
+            </div> */}
         </div>
     )
 }
