@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
-import ReactImg from '../assets/pic.avif';
+// import ReactImg from '../assets/pic.avif';
 import Bitcoin from '../assets/bitcoin.avif';
 import ETH from '../assets/eth.avif';
 import Solana from '../assets/solana.avif';

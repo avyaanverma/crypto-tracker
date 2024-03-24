@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import {toast} from 'react-hot-toast';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate,Link} from 'react-router-dom';
 import './login.css';
 
 export default function Register(){
@@ -36,7 +36,8 @@ export default function Register(){
 
   return (
     <div className="main">
-      {isLoggedIn && <Navbar />} {/* Render the Navbar only if isLoggedIn is true */}
+      {isLoggedIn && <Navbar />} 
+      {/* Render the Navbar only if isLoggedIn is true */}
       <div class="container-l active" id="container-l">
         <div class="form-container sign-up">
             <form onSubmit={registerUser}>
@@ -59,7 +60,7 @@ export default function Register(){
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
                     <h1>Hello, Friend!</h1>
-                    <p>Register with your details</p>
+                    <p>Already Have Account? <Link to="/login">Sign In</Link></p>
                 </div>
             </div>
         </div>
