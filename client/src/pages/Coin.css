@@ -5,7 +5,7 @@
     align-items: center; /* Center coins vertically */
     width: 100%; /* Occupy full width */
     padding: 10px; /* Add padding for spacing */
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .coin-row {

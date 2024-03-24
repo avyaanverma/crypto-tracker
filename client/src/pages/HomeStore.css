@@ -14,8 +14,8 @@
     width: 100%; /* Occupy full width */
     padding: 10px; /* Add padding for spacing */
     height: 500px;
-    border: 2px solid black;
-    overflow-y: hidden;
+    /* border: 2px solid black; */
+    overflow-y: scroll;
   }
   
   .combined-container {
