@@ -10,9 +10,9 @@ export default function Home() {
       <Content />
       <hr color='gray '/>
       <News/>
-      <hr color='gray'/>
+      {/* <hr color='gray'/> */}
       <Tracker/>
-      <hr color='gray'/>
+      {/* <hr color='gray'/> */}
       <Predictor/>
 
     </div>

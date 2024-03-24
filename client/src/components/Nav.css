@@ -323,14 +323,32 @@ nav .menu span{
     margin-top: 20px;
 }
 .footer{
+    
     margin-top: 1px;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
     /* background-image: linear-gradient(to right , rgb(137, 190, 231),rgb(74, 117, 210)); */
-    background-color: rgb(101 , 131 , 222);
+    background-color: blue;
+    height: 90px;
     
 }
-.foot{
+
+.My-Foot{
+    width: 80%;
+}
+.footer-in{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bolder;
+    font-size: larger;
+}
+.foot {
+    background-color: blue;
+    /* display: flex; */
     color: black;
     height: 35px;
     display: flex;
@@ -338,19 +356,14 @@ nav .menu span{
     align-items: center;
 }
 .footer-copyright{
+    background-color: blue;
     text-align: center;
     font-size: larger;
     font-weight: bolder;
     margin-top: 3px;
 }
 
-/* .footer-main{
-    display: flex;
-    justify-content: center;
-    background-color: grey;
-    font-size: large;
-    /* margin-top: 20px; 
-    padding: 20px;
-    width: 100% ;
-    /* bottom: 0; 
-} */
+.foot .hui{
+    text-decoration: none;
+    color: black;
+}

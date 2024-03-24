@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios'
 import {toast} from 'react-hot-toast'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 import './login.css'
 
 export default function Login(){
@@ -23,7 +23,7 @@ export default function Login(){
         toast.error(data.error)
       }else{
         setData({});
-        navigate('/dashboard')
+        navigate('/')
       }
     } catch (error) {
       
@@ -46,7 +46,7 @@ export default function Login(){
               <div className="toggle">
                   <div className="toggle-panel toggle-right">
                       <h1>Welcome Back!</h1>
-                      <p>Enter your details</p>
+                      <p>Not Registered Yet ? <Link to="/register">Sign Up</Link></p>
                   </div>
               </div>
           </div>
