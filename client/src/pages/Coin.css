@@ -18,8 +18,13 @@
     width: 100%; /* Occupy full width */
     max-width: 900px; /* Limit maximum width */
     margin: 5px auto; /* Center horizontally */
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
-
+.coin-row:hover{
+    opacity: 0.8;
+}
 .coin {
     display: flex;
     align-items: center;
