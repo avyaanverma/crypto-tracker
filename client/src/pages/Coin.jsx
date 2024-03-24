@@ -1,11 +1,13 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import './Coin.css'
 
 
 const Coin = ({id, name, image, symbol, marketcap, price, pricechange, volume}) => {
     return (
         <div className="coin-container" key={id}>
-            <div className="coin-row">
+            {/* <div className="coin-row"> */}
+            <Link to={`/coinpage/${id}`} className="coin-row">
                 <div className="coin">
                     <img src={image} alt="crypto" />
                     <h1>{name}</h1>
@@ -23,7 +25,8 @@ const Coin = ({id, name, image, symbol, marketcap, price, pricechange, volume}) 
                         Mkt Cap: Rs.{marketcap ? marketcap.toLocaleString() : 'NA'}
                     </p>
                 </div>
-            </div>
+            {/* </div> */}
+            </Link>
         </div>
     )
 }
