@@ -48,6 +48,29 @@ app.get('/api/coins', async (req, res) => {
   }
 });
 
+app.get('/api/coins/:id', async (req, res) => {
+  const { id } = req.params;
+  const options = {
+    method: 'GET',
+    url: `https://api.coingecko.com/api/v3/coins/${id}`,
+    headers: {
+      'X-RapidAPI-Key': '0b79241ea8msh7c2ff7ce091ab2ep11f93djsn27a8810f7c5a',
+      'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+    }
+  };
+
+  try {
+    const response = await axios.request(options);
+    // console.log(response.data); 
+    res.json(response.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+
 app.get('/api/checkout-orders', async (req, res) => {
   const encodedParams = new URLSearchParams();
   encodedParams.set('accessToken', '<REQUIRED>');

@@ -1,0 +1,31 @@
+.coin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.coin-image {
+    width: 200px; /* Adjust image size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.coin-details {
+    text-align: center;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 50px;
+}

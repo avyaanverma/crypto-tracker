@@ -1,30 +1,47 @@
-import React,{useState} from 'react'
-// import { Link } from "react-router-dom";
-import { useParams } from 'react-router-dom';
-import './CoinPage.css'
-// import  CoinDetail from './Coin';
+import React, { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
+import parse from 'html-react-parser';
+import Axios from 'axios';
+import './CoinPage.css'; // Import CSS file for styling
 
-const CoinPage = ({id, name, image, symbol, marketcap, price, pricechange, volume}) => {
+const CoinPage = () => {
+    const params = useParams();
+    const coinId = params.id;
+    const [coinData, setCoinData] = useState(null);
 
-    // const {id}=useParams();
-    const {coin,setCoin}=useState();
-    // const {currency,symbol}=CoinDetail();
-    
+    useEffect(() => {
+        if (coinId) {
+            Axios.get(`/api/coins/${coinId}`)
+                .then((res) => {
+                    setCoinData(res.data);
+                })
+                .catch(error => {
+                    console.error(error);
+                    // Handle error
+                });
+        }
+    }, [coinId]);   
+
+    if (!coinData) {
+        return <div className="loading">Loading...</div>;
+    }
+
+    const { name, symbol, image, description, market_data } = coinData;
 
     return (
-        <div>
-            <div>
+        <div className="coin-container">
+            <img src={image.large} alt={name} className="coin-image" />
+            <div className="coin-details">
                 <h1>{name}</h1>
+                <p className="description">{parse(description.en.split(". ")[0])}</p>
+                <div className="additional-info">
+                    <p>Rank: {coinData.coingecko_rank}</p>
+                    <p>Current Price: ${market_data.current_price.usd}</p>
+                    <p>Market Cap: ${market_data.market_cap.usd}</p>
+                </div>
             </div>
-            <div>
-                <img src={image} alt={name+"Image"} />
-            </div>
-            <ul className="coinInfo">
-                <li><b>Market Cap:</b> $ {marketcap}</li>
-                <li><b>Price:</b> ${price}</li>
-                <li style={{color:(pricechange>=0?"green":"red")}} ><b>Change 24H:</b> {pricechange}</li>
-            </ul>
         </div>
-    )
-}
-export default CoinPage
+    );
+};
+
+export default CoinPage;

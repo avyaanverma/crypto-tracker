@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from "react-router-dom";
 import './Coin.css'
+import { SingleCoin } from "../config/api";
 
 
 const Coin = ({id, name, image, symbol, marketcap, price, pricechange, volume}) => {
+   
+
     return (
         <div className="coin-container" key={id}>
             {/* <div className="coin-row"> */}
-            <Link to={`/coinpage/${id}`} className="coin-row">
+            <Link to={`/coins/${id}`} className="coin-row">
                 <div className="coin">
                     <img src={image} alt="crypto" />
                     <h1>{name}</h1>

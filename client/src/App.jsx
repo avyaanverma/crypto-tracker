@@ -33,7 +33,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/dashboard' element={<Dashboard/>} />
           <Route path='/homestore' element={<HomeStore/>}/>
-          <Route path='/coinpage/:id' element={<CoinPage/>} />
+          <Route path='/coins/:id' element={<CoinPage/>} />
 
 
         </Routes>

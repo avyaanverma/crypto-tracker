@@ -22,17 +22,17 @@ export default function Navbar() {
 
       <ul className={menuOpen ? "open":""}>
         <li>
-          <Link to='/' >Home</Link>
+          <Link to='/'>Home</Link>
         </li>
-        <li>
-          <Link to='/register' className="register">Register</Link>
-        </li>
+        {/* <li>
+          <Link to='/homestore' className="register">Homestore</Link>
+        </li> */}
         <li>
           <Link to='/login' className="login">Log Out</Link>
         </li>
         <li>
           {/* {req.cookie.token == "" ? null : } */}
-          <Link to='/dashboard' className="dashboard">Dashboard</Link>
+          <Link to='/homestore' className="dashboard">Dashboard</Link>
         </li>
       </ul>
 
