@@ -17,15 +17,15 @@ const Coin = ({id, name, image, symbol, marketcap, price, pricechange, volume}) 
                     <p className="coin-symbol">{symbol}</p>
                 </div>
                 <div className="coin-data">
-                    <p className="coin-price">${price }</p>
-                    <p className="coin-volume">${ volume ? volume.toLocaleString() : 'NA'}</p>
+                    <p className="coin-price">₹{price }</p>
+                    <p className="coin-volume">₹{ volume ? volume.toLocaleString() : 'NA'}</p>
                     {pricechange < 0 ? (
                         <p className="coin-percent red">{pricechange.toFixed(2)}%</p>
                     ) : (
                         <p className="coin-percent green">{pricechange.toFixed(2)}%</p>
                     )}
                     <p className="coin-marketcap">
-                        Mkt Cap: Rs.{marketcap ? marketcap.toLocaleString() : 'NA'}
+                        Mkt Cap: ₹{marketcap ? marketcap.toLocaleString() : 'NA'}
                     </p>
                 </div>
             {/* </div> */}

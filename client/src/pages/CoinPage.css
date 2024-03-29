@@ -25,6 +25,18 @@
     justify-content: space-around;
 }
 
+.info-coins{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.info-coins h3{
+        font-weight: 600;
+}
+
 .loading {
     text-align: center;
     margin-top: 50px;
