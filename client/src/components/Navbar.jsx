@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav>
       <div className="logo">
         <Link to="/"><img className="logo-img" src={logo} width={50}></img></Link>
-        <Link to="/" className='title' >BITPROPHECY</Link>
+        <Link to="/" className='title' >BitProphecy</Link>
       </div>
       
       <div className='menu' onClick={()=>{

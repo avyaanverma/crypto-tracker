@@ -15,12 +15,15 @@ nav{
 
 .logo{
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 20px;
+    
 }
 nav .logo{
     font-size: 2rem;
     margin: 1rem;
-    font-weight: bold;
+    
     /* text-decoration: none; */
     color: rgb(162, 33, 248);
 }
@@ -30,9 +33,10 @@ nav .logo{
 }
 .title{
     height: 50px;
-    color: blue;
-    font-family: 'Corben'; 
+    color: #FFFDD7;
+    font-family: 'Poppins'; 
     font-size: 3.5rem;
+    font-weight: 700;
     /* margin-top: 20px; */
     /* margin-left: 10px; */
     text-shadow: 2px 2px gray;
@@ -330,8 +334,9 @@ nav .menu span{
     justify-content: center;
     align-content: center;
     /* background-image: linear-gradient(to right , rgb(137, 190, 231),rgb(74, 117, 210)); */
-    background-color: blue;
-    height: 90px;
+    background-color: #657aff;
+    height: 120px;
+    padding: 30px;
     
 }
 
@@ -339,7 +344,7 @@ nav .menu span{
     width: 80%;
 }
 .footer-in{
-    color: black;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -347,16 +352,16 @@ nav .menu span{
     font-size: larger;
 }
 .foot {
-    background-color: blue;
+    /* background-color: #657aff; */
     /* display: flex; */
-    color: black;
+    color: rgb(255, 255, 255);
     height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .footer-copyright{
-    background-color: blue;
+    /* background-color: #657aff; */
     text-align: center;
     font-size: larger;
     font-weight: bolder;
@@ -365,5 +370,21 @@ nav .menu span{
 
 .foot .hui{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.foot:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+
+}
+
+.footer-copyright{
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+    
 }

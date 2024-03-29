@@ -1,0 +1,21 @@
+.historic-chart-container {
+    width: 100%;
+    max-width: 800px; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center align the chart */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #657aff;
+    border-radius: 10px 10px;
+  }
