@@ -57,7 +57,9 @@ app.get('/api/coins/:id', async (req, res) => {
       'X-RapidAPI-Key': '0b79241ea8msh7c2ff7ce091ab2ep11f93djsn27a8810f7c5a',
       'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
     }
-  };
+};
+
+
 
   try {
     const response = await axios.request(options);
@@ -68,6 +70,38 @@ app.get('/api/coins/:id', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+app.get('/api/coins/:id/historical', async (req, res) => {
+  const { id } = req.params;
+  let { days } = req.query;
+  
+  // If days parameter is not provided or not a valid number, default to 1 day
+  if (!days || isNaN(parseInt(days))) {
+    days = 1;
+  }
+
+  const options = {
+    method: 'GET',
+    url: `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=INR&days=${days}`,
+    params: {
+      vs_currency: 'INR',
+      days: days,
+    },
+    headers: {
+      'X-RapidAPI-Key': '0b79241ea8msh7c2ff7ce091ab2ep11f93djsn27a8810f7c5a',
+      'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+    }
+  };
+
+  try {
+    const response = await axios.request(options);
+    res.json(response.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 
 
 
