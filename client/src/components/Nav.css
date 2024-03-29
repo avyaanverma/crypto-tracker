@@ -18,6 +18,10 @@ nav{
     align-items: center;
     justify-content: center;
     margin-left: 20px;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 25px;
     
 }
 nav .logo{
@@ -37,10 +41,12 @@ nav .logo{
     font-family: 'Poppins'; 
     font-size: 3.5rem;
     font-weight: 700;
+    text-align: center;
     /* margin-top: 20px; */
     /* margin-left: 10px; */
     text-shadow: 2px 2px gray;
     text-decoration: none;
+    /* padding-bottom: 10px; */
 }
 
 nav ul{
