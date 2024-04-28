@@ -34,6 +34,10 @@ export default function Navbar() {
           {/* {req.cookie.token == "" ? null : } */}
           <Link to='/homestore' className="dashboard">Dashboard</Link>
         </li>
+        <li>
+          {/* {req.cookie.token == "" ? null : } */}
+          <Link to='http://localhost:5173/login' className="dashboard">Predict</Link>
+        </li>
       </ul>
 
     </nav>
