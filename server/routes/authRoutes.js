@@ -6,7 +6,7 @@ const {test,registerUser,loginUser,getProfile} = require('../controllers/authCon
 //Middleware
 router.use(
     cors({
-        origin:'true',
+        origin:true,
         credentials:true,
     })
 )
