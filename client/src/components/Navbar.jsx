@@ -36,7 +36,7 @@ export default function Navbar() {
         </li>
         <li>
           {/* {req.cookie.token == "" ? null : } */}
-          <Link to='http://localhost:5173/login' className="dashboard">Predict</Link>
+          <Link to='https://crypto-tracker-tau-two.vercel.app//login' className="dashboard">Predict</Link>
         </li>
       </ul>
 
