@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 
 const corsOptions = {
-  origin: 'http://localhost:5173', // replace with your frontend's origin
+  origin: 'https://crypto-tracker-tau-two.vercel.app/', // replace with your frontend's origin
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
 };
