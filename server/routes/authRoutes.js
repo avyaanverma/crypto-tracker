@@ -6,8 +6,8 @@ const {test,registerUser,loginUser,getProfile} = require('../controllers/authCon
 //Middleware
 router.use(
     cors({
+        origin:'https://crypto-tracker-kappa-rust.vercel.app/',
         credentials:true,
-        origin:'http://localhost:5173'
     })
 )
 
