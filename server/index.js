@@ -7,13 +7,15 @@ const cors = require('cors');
 
 const app = express();
 
-const corsOptions = {
-  origin: 'true', // replace with your frontend's origin
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
-};
+// const corsOptions = {
+//   origin: true, // replace with your frontend's origin
+//   credentials: true,
+//   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+app.use(cors());
 
 //database connection
 mongoose.connect(process.env.MONGO_URL)
