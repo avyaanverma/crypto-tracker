@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "localhost:5173",
+  "homepage": "https://crypto-tracker-kappa-rust.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -35,5 +35,5 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "vite": "^5.1.4"
   },
-  "proxy": "http://localhost:8000"
+  "proxy": "https://crypto-tracker-serv.vercel.app/"
 }

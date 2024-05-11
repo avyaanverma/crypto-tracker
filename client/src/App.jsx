@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 import HomeStore from './pages/HomeStore';
 import CoinPage from './pages/CoinPage';
 
-axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.baseURL = 'https://crypto-tracker-serv.vercel.app/';
 axios.defaults.withCredentials = true;
 
 function App() {
