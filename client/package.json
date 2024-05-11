@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://crypto-tracker-kappa-rust.vercel.app/",
+  "homepage": "https://crypto-tracker-tau-two.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

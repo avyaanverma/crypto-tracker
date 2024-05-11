@@ -6,7 +6,7 @@ const {test,registerUser,loginUser,getProfile} = require('../controllers/authCon
 //Middleware
 router.use(
     cors({
-        origin:'https://crypto-tracker-kappa-rust.vercel.app/',
+        origin:'https://crypto-tracker-tau-two.vercel.app/',
         credentials:true,
     })
 )
